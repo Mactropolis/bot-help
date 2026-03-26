@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance System</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+        }
+
+        header {
+            padding: 16px;
+            text-align: center;
+            background: #161b22;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 12px;
+        }
+
+        .back {
+            display: block;
+            margin-bottom: 12px;
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .desc {
+            font-size: 15px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .menu-card {
+            background: #161b22;
+            border-radius: 10px;
+            padding: 14px;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .menu-card:hover {
+            background: #21262d;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #58a6ff;
+        }
+
+        .subdesc {
+            font-size: 13px;
+            margin-top: 4px;
+            color: #8b949e;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>📜 Attendance System</header>
+
+    <div class="container">
+
+        <a href="other.html" class="back">← Voltar</a>
+
+        <div class="desc">
+            Please select an operation:
+        </div>
+
+        <div class="desc">
+            Available Operations
+        </div>
+
+        <!-- SUBMENU -->
+        <a href="mark-attendance.html" class="menu-card">
+            <div class="title">📝 Mark Attendance</div>
+            <div class="subdesc">
+                Criar ou modificar registros de presença.
+            </div>
+        </a>
+
+        <!-- SEM SUBMENU -->
+        <div class="menu-card">
+            <div class="title">👀 View Attendance</div>
+            <div class="subdesc">
+                Visualizar registros de presença e exportar relatórios.
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <div class="title">⚙️ Settings</div>
+            <div class="subdesc">
+                Configurar preferências do sistema de presença.
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
