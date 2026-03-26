@@ -26,6 +26,32 @@
             padding: 12px;
         }
 
+        .menu-card {
+            background: #161b22;
+            border-radius: 10px;
+            padding: 14px;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .menu-card:hover {
+            background: #21262d;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #58a6ff;
+        }
+
+        .desc {
+            font-size: 14px;
+            margin-top: 4px;
+            color: #c9d1d9;
+        }
+
         .card {
             background: #161b22;
             border-radius: 10px;
@@ -43,11 +69,6 @@
             font-size: 16px;
             font-weight: bold;
             color: #58a6ff;
-        }
-
-        .desc {
-            font-size: 14px;
-            margin-top: 4px;
         }
 
         .detail {
@@ -82,38 +103,13 @@
 
         <input class="search" placeholder="Buscar comando..." onkeyup="filterCommands(this.value)">
 
-        <div class="card" onclick="toggle(this)">
-            <div class="command">/settings</div>
-            <div class="desc">⭐ Start here to configure the bot</div>
+        <!-- SETTINGS (AGORA MENU PRINCIPAL) -->
+        <a href="settings.html" class="menu-card">
+            <div class="title">⚙️ /settings</div>
+            <div class="desc">Start here to configure the bot</div>
+        </a>
 
-            <div class="detail">
-
-                <b>⚙️ Settings Menu</b><br>
-                Please select a category:<br><br>
-
-                <a href="alliance.html"><b>⚔️ Alliance Operations</b></a><br>
-                <small>Gerenciar alianças e configurações</small><br><br>
-
-                <a href="members.html"><b>👥 Alliance Member Operations</b></a><br>
-                <small>Adicionar, remover e visualizar membros</small><br><br>
-
-                <b>🤖 Bot Operations</b><br>
-                <small>Configurações internas do Bot</small><br><br>
-
-                <a href="gift.html"><b>🎁 Gift Code Operations</b></a><br>
-                <small>Gerenciar códigos e recompensas</small><br><br>
-
-                <a href="history.html"><b>📜 Alliance History</b></a><br>
-                <small>Ver alterações e histórico da aliança</small><br><br>
-
-                <a href="support.html"><b>🆘 Support Operations</b></a><br>
-                <small>Acessar funcionalidades de suporte</small><br><br>
-
-                <a href="theme.html"><b>🎨 Theme Settings</b></a><br>
-                <small>Alterar cores, ícones e aparência do bot</small>
-
-            </div>
-        </div>
+        <!-- COMANDOS -->
         <div class="card" onclick="toggle(this)">
             <div class="command">/ban</div>
             <div class="desc">Remove um usuário</div>
@@ -149,7 +145,7 @@
         }
 
         function filterCommands(value) {
-            const cards = document.querySelectorAll(".card");
+            const cards = document.querySelectorAll(".card, .menu-card");
             value = value.toLowerCase();
 
             cards.forEach(card => {
