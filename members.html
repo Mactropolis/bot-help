@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alliance Member Operations</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+    }
+
+    header {
+      padding: 16px;
+      text-align: center;
+      background: #161b22;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 12px;
+    }
+
+    .back {
+      display: block;
+      margin-bottom: 12px;
+      color: #58a6ff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .card {
+      background: #161b22;
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      background: #21262d;
+    }
+
+    .command {
+      font-size: 16px;
+      font-weight: bold;
+      color: #58a6ff;
+    }
+
+    .desc {
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .detail {
+      display: none;
+      margin-top: 10px;
+      font-size: 14px;
+      border-top: 1px solid #30363d;
+      padding-top: 10px;
+    }
+
+    .active .detail {
+      display: block;
+    }
+
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>👤 Alliance Member Operations</header>
+
+<div class="container">
+
+  <a href="index.html" class="back">← Voltar</a>
+
+  <div class="card" onclick="toggle(this)">
+    <div class="command">👤 Alliance Member Operations</div>
+    <div class="desc">Select an operation to manage members</div>
+
+    <div class="detail">
+
+      <b>👤 Alliance Member Operations</b><br>
+      Please select an operation from below:<br><br>
+
+      <a href="add-members.html"><b>🆕 Add Members</b></a><br>
+      <small>Adicionar novos membros (suporta IDs e importação CSV/TSV)</small><br><br>
+
+      <a href="transfer-members.html"><b>🔄 Transfer Members</b></a><br>
+      <small>Transferir membros para outra aliança</small><br><br>
+
+      <a href="remove-members.html"><b>➖ Remove Members</b></a><br>
+      <small>Remover membros da aliança</small><br><br>
+
+      <a href="view-members.html"><b>👤 View Members</b></a><br>
+      <small>Visualizar lista de membros da aliança</small><br><br>
+
+      <a href="export-members.html"><b>📊 Export Members</b></a><br>
+      <small>Exportar dados dos membros em CSV/TSV</small><br><br>
+
+      <a href="index.html"><b>🏠 Main Menu</b></a><br>
+      <small>Voltar para o menu principal</small>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function toggle(el) {
+    el.classList.toggle("active");
+  }
+</script>
+
+</body>
+</html>
