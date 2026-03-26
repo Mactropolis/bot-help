@@ -37,7 +37,6 @@
         .desc {
             font-size: 15px;
             margin-bottom: 12px;
-            color: #c9d1d9;
             line-height: 1.5;
         }
 
@@ -62,20 +61,18 @@
             line-height: 1.5;
         }
 
+        .highlight {
+            color: #58a6ff;
+            font-weight: bold;
+        }
+
         ul {
             margin: 8px 0 8px 20px;
-            padding: 0;
         }
 
         li {
             margin-bottom: 6px;
             font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .highlight {
-            color: #58a6ff;
-            font-weight: bold;
         }
 
         .button-preview {
@@ -89,14 +86,21 @@
             border-radius: 8px;
         }
 
-        .event-list {
+        .button-danger {
+            display: inline-block;
             margin-top: 10px;
+            margin-left: 8px;
+            background: #da3633;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px 14px;
+            border-radius: 8px;
         }
 
         .event-item {
             font-size: 14px;
-            margin-bottom: 8px;
-            line-height: 1.5;
+            margin-bottom: 6px;
         }
     </style>
 </head>
@@ -113,80 +117,89 @@
             O Setup Wizard ajuda você a configurar rapidamente notificações de eventos.
         </div>
 
-        <div class="desc">
-            No primeiro menu, <span class="highlight">Global Settings</span>, você define as configurações gerais.
-        </div>
-
+        <!-- STEP 1 -->
         <div class="section-title">Global Settings</div>
 
         <div class="menu-card">
 
             <div class="item">
-                📍 <span class="highlight">Channel:</span> informe o canal onde as notificações serão enviadas.
-                Geralmente utilizamos o canal <b>alerts</b>.
+                📍 <span class="highlight">Channel:</span> canal onde as notificações serão enviadas (ex: <b>alerts</b>)
             </div>
 
             <div class="item">
-                📢 <span class="highlight">Mention:</span> escolha como os usuários serão mencionados:
+                📢 <span class="highlight">Mention:</span>
             </div>
 
             <ul>
-                <li>1) @everyone (notifica todos)</li>
-                <li>2) Um cargo específico</li>
-                <li>3) Um usuário específico</li>
-                <li>4) Não mencionar ninguém</li>
+                <li>@everyone</li>
+                <li>Cargo específico</li>
+                <li>Usuário específico</li>
+                <li>Sem menção (recomendado)</li>
             </ul>
 
             <div class="item">
-                <b>Dica:</b> dê preferência à opção 4 para evitar spam.
+                🕰️ <span class="highlight">Notification Times:</span> frequência e antecedência das notificações
             </div>
 
             <div class="item">
-                🕰️ <span class="highlight">Notification Times:</span> define quantas vezes e com quanto tempo de antecedência a notificação será enviada.
+                🌍 <span class="highlight">Timezone:</span> fuso horário
             </div>
 
-            <div class="item">
-                🌍 <span class="highlight">Timezone:</span> permite definir um fuso horário específico.
-            </div>
-
-            <div class="button-preview">
-                Continue to Event Selection
-            </div>
+            <div class="button-preview">Continue to Event Selection</div>
 
         </div>
 
+        <!-- STEP 2 -->
         <div class="section-title">Configure Events</div>
 
         <div class="menu-card">
 
             <div class="item">
-                Neste menu, você deve selecionar ou desselecionar os eventos que deseja notificar.
+                Selecione os eventos que deseja notificar.
             </div>
 
             <div class="item">
-                Clique em um evento para configurá-lo. Eventos configurados exibem ✅
+                Clique para configurar ✅ ou remover ❌
+            </div>
+
+            <div class="event-item">🐻 Bear Trap ✅</div>
+            <div class="event-item">🤪 Crazy Joe</div>
+            <div class="event-item">🗡️ Mercenary Prestige ✅</div>
+            <div class="event-item">🏭 Foundry Battle ✅</div>
+            <div class="event-item">⚔️ Canyon Clash ✅</div>
+            <div class="event-item">🏰 Fortress Battle</div>
+            <div class="event-item">⛏️ Frostfire Mine ✅</div>
+            <div class="event-item">☀️ Castle Battle</div>
+            <div class="event-item">⚡ SvS</div>
+            <div class="event-item">🔄 Daily Reset ✅</div>
+
+            <div class="button-preview">Continue to Preview</div>
+
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="section-title">Preview: Notifications to Create</div>
+
+        <div class="menu-card">
+
+            <div class="item">
+                Aqui você verá todas as notificações que serão criadas com base nas configurações escolhidas.
             </div>
 
             <div class="item">
-                Clique novamente em um evento já configurado para removê-lo.
+                Revise os eventos selecionados e seus horários antes de continuar.
             </div>
 
             <div class="item">
-                <span class="highlight">Eventos disponíveis:</span>
+                Se tudo estiver correto, clique em <span class="highlight">Create All</span> para finalizar.
             </div>
 
-            <div class="event-list">
-                <div class="event-item">🐻 Bear Trap ✅</div>
-                <div class="event-item">🤪 Crazy Joe</div>
-                <div class="event-item">🗡️ Mercenary Prestige ✅</div>
-                <div class="event-item">🏭 Foundry Battle ✅</div>
-                <div class="event-item">⚔️ Canyon Clash ✅</div>
-                <div class="event-item">🏰 Fortress Battle</div>
-                <div class="event-item">⛏️ Frostfire Mine ✅</div>
-                <div class="event-item">☀️ Castle Battle</div>
-                <div class="event-item">⚡ SvS</div>
-                <div class="event-item">🔄 Daily Reset ✅</div>
+            <div class="item">
+                Caso queira cancelar, clique em <span class="highlight">Cancel</span>.
             </div>
+
+            <div class="button-preview">🧙 Create All</div>
+            <div class="button-danger">Cancel</div>
 
         </div>
 
