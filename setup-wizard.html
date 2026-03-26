@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Wizard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+        }
+
+        header {
+            padding: 16px;
+            text-align: center;
+            background: #161b22;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 12px;
+        }
+
+        .back {
+            display: block;
+            margin-bottom: 12px;
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .desc {
+            font-size: 15px;
+            margin-bottom: 12px;
+            color: #c9d1d9;
+            line-height: 1.5;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #58a6ff;
+            margin-top: 18px;
+            margin-bottom: 10px;
+        }
+
+        .menu-card {
+            background: #161b22;
+            border-radius: 10px;
+            padding: 14px;
+            margin-bottom: 10px;
+        }
+
+        .item {
+            font-size: 14px;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        ul {
+            margin: 8px 0 8px 20px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 6px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .highlight {
+            color: #58a6ff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>🧙 Setup Wizard</header>
+
+    <div class="container">
+
+        <a href="notification-system.html" class="back">← Voltar</a>
+
+        <div class="desc">
+            O Setup Wizard ajuda você a configurar rapidamente notificações de eventos.
+        </div>
+
+        <div class="desc">
+            No primeiro menu, <span class="highlight">Global Settings</span>, você define as configurações gerais.
+        </div>
+
+        <div class="section-title">Global Settings</div>
+
+        <div class="menu-card">
+
+            <div class="item">
+                📍 <span class="highlight">Channel:</span> informe o canal onde as notificações serão enviadas.
+                Geralmente utilizamos o canal <b>alerts</b>.
+            </div>
+
+            <div class="item">
+                📢 <span class="highlight">Mention:</span> escolha como os usuários serão mencionados:
+            </div>
+
+            <ul>
+                <li>1) @everyone (notifica todos)</li>
+                <li>2) Um cargo específico</li>
+                <li>3) Um usuário específico</li>
+                <li>4) Não mencionar ninguém</li>
+            </ul>
+
+            <div class="item">
+                <b>Dica:</b> dê preferência à opção 4 para evitar spam.
+            </div>
+
+            <div class="item">
+                🕰️ <span class="highlight">Notification Times:</span> define quantas vezes e com quanto tempo de
+                antecedência a notificação será enviada.
+            </div>
+
+            <div class="item">
+                🌍 <span class="highlight">Timezone:</span> permite definir um fuso horário específico.
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
