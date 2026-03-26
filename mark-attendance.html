@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+        }
+
+        header {
+            padding: 16px;
+            text-align: center;
+            background: #161b22;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 12px;
+        }
+
+        .back {
+            display: block;
+            margin-bottom: 12px;
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .desc {
+            font-size: 15px;
+            margin-bottom: 12px;
+            color: #c9d1d9;
+            line-height: 1.5;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #58a6ff;
+            margin-top: 18px;
+            margin-bottom: 10px;
+        }
+
+        .menu-card {
+            background: #161b22;
+            border-radius: 10px;
+            padding: 14px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #58a6ff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .subdesc {
+            font-size: 13px;
+            margin-top: 4px;
+            color: #8b949e;
+            line-height: 1.5;
+        }
+
+        .item {
+            font-size: 14px;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .highlight {
+            color: #58a6ff;
+            font-weight: bold;
+        }
+
+        .button-preview {
+            display: inline-block;
+            margin-top: 10px;
+            background: #238636;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px 14px;
+            border-radius: 8px;
+        }
+
+        ul {
+            margin: 8px 0 8px 20px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 6px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>📝 Mark Attendance</header>
+
+    <div class="container">
+
+        <a href="attendance-system.html" class="back">← Voltar</a>
+
+        <div class="desc">
+            Neste menu você pode criar uma nova sessão de presença ou selecionar uma sessão existente para incluir,
+            excluir ou modificar a presença dos jogadores.
+        </div>
+
+        <div class="section-title">Session Selection</div>
+
+        <div class="menu-card">
+            <div class="title">🆕 New Session</div>
+            <div class="subdesc">
+                Criar um novo evento de presença.
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <div class="title">📂 Select Session</div>
+            <div class="subdesc">
+                Selecionar um evento existente para incluir, excluir ou modificar a presença dos jogadores.
+            </div>
+        </div>
+
+        <div class="section-title">Player Selection</div>
+
+        <div class="menu-card">
+            <div class="item">
+                No próximo menu será exibida uma lista dos jogadores da aliança.
+            </div>
+
+            <div class="item">
+                Vários jogadores podem ser selecionados em cada página da lista.
+            </div>
+
+            <div class="item">
+                Caso o objetivo seja informar a <span class="highlight">pontuação</span>, cada jogador deve ser
+                selecionado individualmente.
+            </div>
+        </div>
+
+        <div class="section-title">Attendance Status</div>
+
+        <div class="menu-card">
+            <div class="item">
+                Após a seleção, deve ser informado se o jogador está:
+            </div>
+
+            <ul>
+                <li><span class="highlight">Present</span></li>
+                <li><span class="highlight">Absent</span></li>
+            </ul>
+
+            <div class="item">
+                Se <span class="highlight">Present</span> for informado e <span class="highlight">apenas um
+                    jogador</span> tiver sido selecionado,
+                você pode informar a pontuação individual desse jogador.
+            </div>
+
+            <div class="item">
+                Se <span class="highlight">vários jogadores</span> forem selecionados, você só poderá informar uma
+                pontuação geral para todos.
+            </div>
+        </div>
+
+        <div class="section-title">Finish</div>
+
+        <div class="menu-card">
+            <div class="item">
+                Ao finalizar, clique em <span class="highlight">Finish Attendance</span> para salvar as alterações.
+            </div>
+
+            <div class="button-preview">Finish Attendance</div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
