@@ -34,20 +34,21 @@
             font-size: 14px;
         }
 
-        .card {
+        .menu-card {
             background: #161b22;
             border-radius: 10px;
             padding: 14px;
             margin-bottom: 10px;
-            cursor: pointer;
+            display: block;
+            text-decoration: none;
             transition: 0.2s;
         }
 
-        .card:hover {
+        .menu-card:hover {
             background: #21262d;
         }
 
-        .command {
+        .title {
             font-size: 16px;
             font-weight: bold;
             color: #58a6ff;
@@ -56,23 +57,7 @@
         .desc {
             font-size: 14px;
             margin-top: 4px;
-        }
-
-        .detail {
-            display: none;
-            margin-top: 10px;
-            font-size: 14px;
-            border-top: 1px solid #30363d;
-            padding-top: 10px;
-        }
-
-        .active .detail {
-            display: block;
-        }
-
-        a {
-            color: #58a6ff;
-            text-decoration: none;
+            color: #c9d1d9;
         }
     </style>
 </head>
@@ -85,37 +70,31 @@
 
         <a href="index.html" class="back">← Voltar</a>
 
-        <div class="card" onclick="toggle(this)">
-            <div class="command">⚔️ Alliance Operations</div>
-            <div class="desc">Select an operation to manage alliances</div>
-
-            <div class="detail">
-
-                <b>⚔️ Alliance Operations</b><br>
-                Please select an operation:<br><br>
-
-                <a href="add-alliance.html"><b>➕ Add Alliance</b></a><br>
-                <small>Criar uma nova aliança</small><br><br>
-
-                <a href="edit-alliance.html"><b>📝 Edit Alliance</b></a><br>
-                <small>Modificar as configurações de uma aliança existente</small><br><br>
-
-                <a href="delete-alliance.html"><b>🗑️ Delete Alliance</b></a><br>
-                <small>Remover uma aliança existente</small><br><br>
-
-                <a href="view-alliances.html"><b>👀 View Alliances</b></a><br>
-                <small>Listar todas as alianças disponíveis</small>
-
-            </div>
+        <div class="desc" style="margin-bottom: 12px;">
+            Please select an operation:
         </div>
 
-    </div>
+        <a href="add-alliance.html" class="menu-card">
+            <div class="title">➕ Add Alliance</div>
+            <div class="desc">Criar uma nova aliança</div>
+        </a>
 
-    <script>
-        function toggle(el) {
-            el.classList.toggle("active");
-        }
-    </script>
+        <a href="edit-alliance.html" class="menu-card">
+            <div class="title">📝 Edit Alliance</div>
+            <div class="desc">Modificar as configurações de uma aliança existente</div>
+        </a>
+
+        <a href="delete-alliance.html" class="menu-card">
+            <div class="title">🗑️ Delete Alliance</div>
+            <div class="desc">Remover uma aliança existente</div>
+        </a>
+
+        <a href="view-alliances.html" class="menu-card">
+            <div class="title">👀 View Alliances</div>
+            <div class="desc">Listar todas as alianças disponíveis</div>
+        </a>
+
+    </div>
 
 </body>
 
