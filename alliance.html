@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alliance Operations</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+        }
+
+        header {
+            padding: 16px;
+            text-align: center;
+            background: #161b22;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 12px;
+        }
+
+        .back {
+            display: block;
+            margin-bottom: 12px;
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .card {
+            background: #161b22;
+            border-radius: 10px;
+            padding: 14px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            background: #21262d;
+        }
+
+        .command {
+            font-size: 16px;
+            font-weight: bold;
+            color: #58a6ff;
+        }
+
+        .desc {
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .detail {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+            border-top: 1px solid #30363d;
+            padding-top: 10px;
+        }
+
+        .active .detail {
+            display: block;
+        }
+
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>⚔️ Alliance Operations</header>
+
+    <div class="container">
+
+        <a href="index.html" class="back">← Voltar</a>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="command">⚔️ Alliance Operations</div>
+            <div class="desc">Select an operation to manage alliances</div>
+
+            <div class="detail">
+
+                <b>⚔️ Alliance Operations</b><br>
+                Please select an operation:<br><br>
+
+                <a href="add-alliance.html"><b>➕ Add Alliance</b></a><br>
+                <small>Criar uma nova aliança</small><br><br>
+
+                <a href="edit-alliance.html"><b>📝 Edit Alliance</b></a><br>
+                <small>Modificar as configurações de uma aliança existente</small><br><br>
+
+                <a href="delete-alliance.html"><b>🗑️ Delete Alliance</b></a><br>
+                <small>Remover uma aliança existente</small><br><br>
+
+                <a href="view-alliances.html"><b>👀 View Alliances</b></a><br>
+                <small>Listar todas as alianças disponíveis</small>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggle(el) {
+            el.classList.toggle("active");
+        }
+    </script>
+
+</body>
+
+</html>

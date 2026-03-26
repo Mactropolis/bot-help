@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda do Bot</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+        }
+
+        header {
+            padding: 16px;
+            text-align: center;
+            background: #161b22;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 12px;
+        }
+
+        .card {
+            background: #161b22;
+            border-radius: 10px;
+            padding: 14px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            background: #21262d;
+        }
+
+        .command {
+            font-size: 16px;
+            font-weight: bold;
+            color: #58a6ff;
+        }
+
+        .desc {
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .detail {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+            border-top: 1px solid #30363d;
+            padding-top: 10px;
+        }
+
+        .active .detail {
+            display: block;
+        }
+
+        .search {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 12px;
+            background: #21262d;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>🤖 Ajuda do Bot</header>
+
+    <div class="container">
+
+        <input class="search" placeholder="Buscar comando..." onkeyup="filterCommands(this.value)">
+
+        <div class="card" onclick="toggle(this)">
+            <div class="command">/settings</div>
+            <div class="desc">⭐ Start here to configure the bot</div>
+
+            <div class="detail">
+
+                <b>⚙️ Settings Menu</b><br>
+                Please select a category:<br><br>
+
+                <a href="alliance.html"><b>⚔️ Alliance Operations</b></a><br>
+                <small>Gerenciar alianças e configurações</small><br><br>
+
+                <a href="members.html"><b>👥 Alliance Member Operations</b></a><br>
+                <small>Adicionar, remover e visualizar membros</small><br><br>
+
+                <a href="bot.html"><b>🤖 Bot Operations</b></a><br>
+                <small>Ajustar o funcionamento do bot</small><br><br>
+
+                <a href="gift.html"><b>🎁 Gift Code Operations</b></a><br>
+                <small>Gerenciar códigos e recompensas</small><br><br>
+
+                <a href="history.html"><b>📜 Alliance History</b></a><br>
+                <small>Ver alterações e histórico da aliança</small><br><br>
+
+                <a href="support.html"><b>🆘 Support Operations</b></a><br>
+                <small>Acessar funcionalidades de suporte</small><br><br>
+
+                <a href="theme.html"><b>🎨 Theme Settings</b></a><br>
+                <small>Alterar cores, ícones e aparência do bot</small>
+
+            </div>
+        </div>
+        <div class="card" onclick="toggle(this)">
+            <div class="command">/ban</div>
+            <div class="desc">Remove um usuário</div>
+            <div class="detail">
+                Uso: /ban @usuario motivo<br>
+                Permissão: Admin
+            </div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="command">/kick</div>
+            <div class="desc">Expulsa um usuário</div>
+            <div class="detail">
+                Uso: /kick @usuario<br>
+                Permissão: Moderador
+            </div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="command">/help</div>
+            <div class="desc">Mostra ajuda</div>
+            <div class="detail">
+                Uso: /help comando<br>
+                Exemplo: /help ban
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggle(el) {
+            el.classList.toggle("active");
+        }
+
+        function filterCommands(value) {
+            const cards = document.querySelectorAll(".card");
+            value = value.toLowerCase();
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                card.style.display = text.includes(value) ? "block" : "none";
+            });
+        }
+    </script>
+
+</body>
+
+</html>
