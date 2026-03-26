@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification System</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+        }
+
+        header {
+            padding: 16px;
+            text-align: center;
+            background: #161b22;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 12px;
+        }
+
+        .back {
+            display: block;
+            margin-bottom: 12px;
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .desc {
+            font-size: 15px;
+            margin-bottom: 12px;
+            color: #c9d1d9;
+            line-height: 1.5;
+        }
+
+        .menu-card {
+            background: #161b22;
+            border-radius: 10px;
+            padding: 14px;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .menu-card:hover {
+            background: #21262d;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #58a6ff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .arrow {
+            color: #8b949e;
+        }
+
+        .subdesc {
+            font-size: 13px;
+            margin-top: 4px;
+            color: #8b949e;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>📢 Notification System</header>
+
+    <div class="container">
+
+        <a href="other.html" class="back">← Voltar</a>
+
+        <div class="desc">
+            O Sistema de Notificações pode ser utilizado para criar alertas que avisam os jogadores sobre eventos futuros.
+            Ele é totalmente personalizável e pode ser usado para qualquer tipo de evento. Utilize as opções abaixo para começar.
+        </div>
+
+        <div class="desc">
+            Operações disponíveis
+        </div>
+
+        <a href="setup-wizard.html" class="menu-card">
+            <div class="title">
+                <span>🧙 Setup Wizard</span>
+                <span class="arrow">→</span>
+            </div>
+            <div class="subdesc">
+                Configuração rápida e fácil para notificações de eventos mais comuns<br>
+                O assistente irá guiá-lo passo a passo durante todo o processo<br>
+                Execute novamente o assistente em um canal para atualizar notificações existentes
+            </div>
+        </a>
+
+        <a href="custom-notification.html" class="menu-card">
+            <div class="title">
+                <span>⏰ Custom Notification</span>
+                <span class="arrow">→</span>
+            </div>
+            <div class="subdesc">
+                Configure uma nova notificação com horário, mensagem, menções e repetição personalizados<br>
+                Suporta mensagens simples e embeds avançados<br>
+                Ideal para eventos não cobertos pelo assistente
+            </div>
+        </a>
+
+        <a href="manage-notifications.html" class="menu-card">
+            <div class="title">
+                <span>📜 Manage Notifications</span>
+                <span class="arrow">→</span>
+            </div>
+            <div class="subdesc">
+                Visualize todas as notificações existentes<br>
+                Edite, ative/desative ou exclua notificações
+            </div>
+        </a>
+
+        <a href="schedule-boards.html" class="menu-card">
+            <div class="title">
+                <span>📅 Schedule Boards</span>
+                <span class="arrow">→</span>
+            </div>
+            <div class="subdesc">
+                Crie painéis de agenda que exibem notificações futuras<br>
+                Atualização automática ao criar, editar ou excluir notificações<br>
+                Suporte para painéis globais ou por canal com configurações personalizadas
+            </div>
+        </a>
+
+        <a href="event-templates.html" class="menu-card">
+            <div class="title">
+                <span>📄 Event Templates</span>
+                <span class="arrow">→</span>
+            </div>
+            <div class="subdesc">
+                Navegue por modelos de eventos pré-configurados<br>
+                Visualize e modifique os padrões de notificação
+            </div>
+        </a>
+
+        <a href="notification-settings.html" class="menu-card">
+            <div class="title">
+                <span>⚙️ Settings</span>
+                <span class="arrow">→</span>
+            </div>
+            <div class="subdesc">
+                Configure se as notificações enviadas serão removidas automaticamente<br>
+                Defina o tempo padrão para exclusão das notificações
+            </div>
+        </a>
+
+    </div>
+
+</body>
+
+</html>
