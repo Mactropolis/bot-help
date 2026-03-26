@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alliance Member Operations</title>
+    <title>Members Operations</title>
 
     <style>
         body {
@@ -39,13 +39,6 @@
             border-radius: 10px;
             padding: 14px;
             margin-bottom: 10px;
-            display: block;
-            text-decoration: none;
-            transition: 0.2s;
-        }
-
-        .menu-card:hover {
-            background: #21262d;
         }
 
         .title {
@@ -64,45 +57,40 @@
 
 <body>
 
-    <header>👤 Alliance Member Operations</header>
+    <header>👥 Members Operations</header>
 
     <div class="container">
 
         <a href="index.html" class="back">← Voltar</a>
 
         <div class="desc" style="margin-bottom: 12px;">
-            Please select an operation from below:
+            Please select an operation:
         </div>
 
-        <a href="add-members.html" class="menu-card">
-            <div class="title">🆕 Add Members</div>
-            <div class="desc">Adicionar novos membros (suporta IDs e importação CSV/TSV)</div>
-        </a>
+        <div class="menu-card">
+            <div class="title">➕ Add Member</div>
+            <div class="desc">Adicionar um novo membro a uma aliança</div>
+        </div>
 
-        <a href="transfer-members.html" class="menu-card">
+        <div class="menu-card">
             <div class="title">🔄 Transfer Members</div>
-            <div class="desc">Transferir membros para outra aliança</div>
-        </a>
+            <div class="desc">Transferir membros entre alianças cadastradas no bot</div>
+        </div>
 
-        <a href="remove-members.html" class="menu-card">
-            <div class="title">➖ Remove Members</div>
-            <div class="desc">Remover membros da aliança</div>
-        </a>
+        <div class="menu-card">
+            <div class="title">📝 Edit Member</div>
+            <div class="desc">Modificar as informações de um membro existente</div>
+        </div>
 
-        <a href="view-members.html" class="menu-card">
-            <div class="title">👤 View Members</div>
-            <div class="desc">Visualizar lista de membros da aliança</div>
-        </a>
+        <div class="menu-card">
+            <div class="title">🗑️ Delete Member</div>
+            <div class="desc">Remover um membro de uma aliança</div>
+        </div>
 
-        <a href="export-members.html" class="menu-card">
-            <div class="title">📊 Export Members</div>
-            <div class="desc">Exportar dados dos membros em CSV/TSV</div>
-        </a>
-
-        <a href="index.html" class="menu-card">
-            <div class="title">🏠 Main Menu</div>
-            <div class="desc">Voltar para o menu principal</div>
-        </a>
+        <div class="menu-card">
+            <div class="title">👀 View Members</div>
+            <div class="desc">Listar todos os membros cadastrados</div>
+        </div>
 
     </div>
 
