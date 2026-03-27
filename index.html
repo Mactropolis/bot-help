@@ -103,11 +103,16 @@
 
         <input class="search" placeholder="Buscar comando..." onkeyup="filterCommands(this.value)">
 
-        <!-- SETTINGS (AGORA MENU PRINCIPAL) -->
-        <a href="settings.html" class="menu-card">
+        <div class="menu-card">
             <div class="title">⚙️ /settings</div>
-            <div class="desc">Start here to configure the bot</div>
-        </a>
+            <div class="desc">
+                No Discord, digite:<br><br>
+                <span style="background:#0d1117;padding:6px 10px;border-radius:6px;font-family:monospace;">
+                    /settings
+                </span><br><br>
+                para abrir o menu de configurações.
+            </div>
+        </div>
 
         <!-- COMANDOS -->
         <div class="card" onclick="toggle(this)">
